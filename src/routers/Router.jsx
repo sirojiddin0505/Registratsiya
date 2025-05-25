@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Login from "../pages/login/Login";
 import Layout from "../layout/layout";
 import Index from "../pages/kirish";
+import App from "../App";
 
 export const Router = createBrowserRouter([
     {
@@ -9,8 +10,8 @@ export const Router = createBrowserRouter([
         element:<Login/>
     },
     {
-        path:'/layout',
-        element:<Layout/>
+        path:'/',
+        element:<App/>
     },
     {
         path:'/index',
