@@ -1,8 +1,9 @@
+import axios from 'axios'
 import { useForm } from 'react-hook-form'
 import { NavLink, useNavigate } from 'react-router-dom'
 
 const Login = () => {
-    const {register, handleSubmit, formState:{errors},} = useForm()
+    const {register, handleSubmit, formState:{errors}} = useForm()
     const navigate = useNavigate()
     const onSubmit = async (data) => {
         try{
@@ -13,10 +14,8 @@ const Login = () => {
             localStorage.setItem("token", response?.data?.access_token)
             navigate("/")
             alert("good")
-        }catch(err){
-            alert("bad")
-            console.log(err);
-            
+        }catch(error){
+            console.log(error);
         }
     }
   return (

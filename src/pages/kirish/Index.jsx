@@ -2,14 +2,14 @@ import React from 'react'
 import { Link, NavLink, useNavigate } from 'react-router-dom'
 import { IoMdArrowRoundBack } from "react-icons/io";
 import { useForm } from 'react-hook-form';
-import google from '/Users/user/OneDrive/Desktop/Registratsiya/src/assets/image.png'
+import google from '/Users/user/OneDrive/Desktop/react/Registratsiya/src/assets/image.png'
 
 
 const Index = () => {
     const {register, handleSubmit, formState:{errors}}= useForm()
   return (
      <section className='bg-blue-100' id='index'>
-        <div className="container mx-auto  min-h-screen flex items-center justify-center border-2 border-red-600 ">
+        <div className="container mx-auto  min-h-screen flex items-center justify-center">
             <div className="bg-white py-6 px-8 rounded-[12px]  ">
                 <Link to={"/login"}><button className='text-4xl font-bold cursor-pointer hover:opacity-80'><IoMdArrowRoundBack/></button></Link>
                 <h1 className="font-bold text-center text-[30px] pb-8">Ro'yxatdan o'tish</h1>

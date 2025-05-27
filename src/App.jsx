@@ -1,17 +1,17 @@
-import React, { useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
-import Layout from './layout/layout'
-import Login from './pages/login/Login'
+import { useNavigate } from "react-router-dom"
+import Layout from "./components/layout/Layout"
+import Login from "./pages/login/Login"
+import { useEffect } from "react"
 
-const App = () => {
+  
+  export default function App() {
     const token = localStorage.getItem("token")
     const navigate = useNavigate()
-    useEffect(() =>{
+    useEffect(()=> {
         if(!token){
-            navigate("login")
+            navigate("/")
         }
-    },[token])
+    }, [token])
     return token ? <Layout/> : <Login/>
-}
-
-export default App
+  }
+  
