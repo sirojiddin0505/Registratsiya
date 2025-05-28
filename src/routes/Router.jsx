@@ -6,6 +6,9 @@ import Index from "../pages/kirish/Index"
 import Dashboard from "../pages/dashboard/Dashboard"
 import Users from "../pages/users/Users"
 import Region from "../pages/region/Region"
+import Lesson from "../pages/lesson/Lesson"
+import Test from "../pages/test/Test"
+import App from "../App"
 
 export const Router = createBrowserRouter([
     {
@@ -18,7 +21,7 @@ export const Router = createBrowserRouter([
     },
     {
         path:'/',
-        element:<Layout />,
+        element:<App />,
         children:[
             {
                 index: true,
@@ -31,6 +34,14 @@ export const Router = createBrowserRouter([
             {
                 path: "/region",
                 element: <Region/>  
+            },
+            {
+                path: "/lesson",
+                element: <Lesson/>
+            },
+            {
+                path: "/test",
+                element: <Test/>
             }
         ]
     }
