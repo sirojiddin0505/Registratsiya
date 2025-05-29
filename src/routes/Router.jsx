@@ -1,14 +1,13 @@
 import { createBrowserRouter } from "react-router-dom"
-import Layout from "../components/layout/Layout"
 import Login from "../pages/login/Login"
 import Index from "../pages/kirish/Index"
-// import App from "../App"
 import Dashboard from "../pages/dashboard/Dashboard"
 import Users from "../pages/users/Users"
 import Region from "../pages/region/Region"
 import Lesson from "../pages/lesson/Lesson"
 import Test from "../pages/test/Test"
 import App from "../App"
+import News from "../pages/news/News"
 
 export const Router = createBrowserRouter([
     {
@@ -42,6 +41,10 @@ export const Router = createBrowserRouter([
             {
                 path: "/test",
                 element: <Test/>
+            },
+            {
+                path: "/news",
+                element: <News/>
             }
         ]
     }

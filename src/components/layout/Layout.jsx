@@ -18,6 +18,7 @@ const Layout = () => {
           <NavLink to={'/region'} className='font-semibold text-[18px] text-white'>Regions</NavLink>
           <NavLink to={'/lesson'} className='font-semibold text-[18px] text-white'>Lessons</NavLink>
           <NavLink to={'/test'} className='font-semibold text-[18px] text-white'>Test</NavLink>
+          <NavLink to={'/news'} className='font-semibold text-[18px] text-white'>News</NavLink>
         </div>
         <div className='w-full '>
           <div className='bg-gray-400 py-4 px-6 text-end'><button onClick={logOut} className='cursor-pointer bg-red-500 text-white py-2 w-[100px] rounded-[6px]'>LogOut</button></div>
