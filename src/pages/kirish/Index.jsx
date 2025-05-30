@@ -2,7 +2,7 @@ import React from 'react'
 import { Link, NavLink, useNavigate } from 'react-router-dom'
 import { IoMdArrowRoundBack } from "react-icons/io";
 import { useForm } from 'react-hook-form';
-import google from '/Users/user/OneDrive/Desktop/react/Registratsiya/src/assets/image.png'
+import google from '../../assets/image.png'
 
 
 const Index = () => {
