@@ -1,6 +1,8 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import { useForm } from 'react-hook-form'
+import { get, useForm } from 'react-hook-form'
+import { API } from '../api/Api'
+import { toast } from 'react-toastify'
 
 const News = () => {
     const [news, setNews] = useState([])
@@ -33,6 +35,19 @@ const News = () => {
             console.log(error);
         }
     }
+    const deleteNews = async (id) =>{
+        try{
+            const res = await API.delete(`/advertisement/${id}`)
+            if(res?.status){
+                getNews()
+                toast.success("good")
+              }else{
+                alert("xatolik")
+              }
+        }catch(error){
+            console.log(error);
+        }
+    }
   return (
     <section className='py-4 px-6'>
         <header className='flex justify-between py-4'>
@@ -42,12 +57,15 @@ const News = () => {
         {
             loading ? <div className='loader'></div> :
             
-            news && news.map((item, index) => (
+            news && news.map((item, index) => ( 
+                <div>
                 <div>
                    <div className='w-[350px] rounded-2xl border-2 overflow-hidden'>
                       <video src={item?.video} controls className='w-full'></video>
                    </div>
                    <h3 className='py-2 text-2xl font-semibold'>{item?.title}</h3>
+                   <button className='cursor-pointer text-white bg-red-500 py-1 px-4 rounded-md my-4 ' onClick={()=>deleteNews(item?.id)}>delete</button>
+                </div>
                 </div>
             ))  
         }
