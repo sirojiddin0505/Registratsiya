@@ -2,7 +2,7 @@ import axios from 'axios'
 import { useForm } from 'react-hook-form'
 import { NavLink, useNavigate } from 'react-router-dom'
 import { toast, ToastContainer } from 'react-toastify'
-import logo1 from "/Users/user/OneDrive/Desktop/react/Registratsiya/src/assets/logo.png"
+import logo1 from "../../assets/logo.png"
 
 const Login = () => {
     const {register, handleSubmit, formState:{errors }} = useForm()
