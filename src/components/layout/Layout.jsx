@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { BiMenuAltLeft } from "react-icons/bi";
 import { NavLink, Outlet, useNavigate } from 'react-router-dom'
-import logo from '/Users/user/OneDrive/Desktop/react/Registratsiya/src/assets/PSYEDU.svg'
+import logo from '../../assets/PSYEDU.svg'
 
 const Layout = () => {
   const navigate = useNavigate()
